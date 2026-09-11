@@ -777,7 +777,10 @@ h2 + .lead, .lead + .lead, .h2 + .lead { margin-top: clamp(18px, 2vw, 26px); }
   .problem__grid, .signature__grid, .story__grid, .about__grid, .cast__grid, .form__grid { grid-template-columns: minmax(0, 1fr); }
   .problem__sticky { position: static; }
   .signature__media { order: -1; }
-  .story__media { order: -1; max-width: 100%; }
+  /* a foto acima de "06 — A origem" fica 30% menor que a coluna de texto,
+     centralizada (largura explícita: margem auto em item de grid só centraliza
+     quando a largura não é stretch) */
+  .story__media { order: -1; width: 70%; max-width: 70%; margin-inline: auto; }
   .model__steps { grid-template-columns: minmax(0, 1fr); gap: 0; }
   .model__rail, .model__fill { left: 5px; right: auto; top: 8px; bottom: 8px; width: 1px; height: auto; }
   .model__fill { height: var(--p, 0%); width: 1px; transition: height 180ms linear; }
