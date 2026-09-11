@@ -314,13 +314,14 @@ h2 + .lead, .lead + .lead, .h2 + .lead { margin-top: clamp(18px, 2vw, 26px); }
 .menu li { border-top: 1px solid var(--border); }
 .menu li:last-child { border-bottom: 1px solid var(--border); }
 .menu a {
-  display: flex; align-items: baseline; gap: 16px; padding: 18px 0;
-  font-family: var(--font-display); font-size: clamp(1.5rem, 7vw, 2.1rem); font-weight: 600;
-  letter-spacing: -.02em; opacity: 0; transform: translateY(14px);
+  display: flex; align-items: baseline; gap: 14px; padding: 15px 0;
+  font-family: var(--font-display); font-size: clamp(1.25rem, 4.6vw, 1.4rem); font-weight: 600;
+  letter-spacing: -.015em; opacity: 0; transform: translateY(14px);
 }
 .menu.is-open a { opacity: 1; transform: none; transition: opacity 420ms var(--ease) var(--d, 0ms), transform 420ms var(--ease) var(--d, 0ms); }
-.menu a i { font-style: normal; font-size: .72rem; letter-spacing: .12em; color: var(--brand-500); font-variant-numeric: tabular-nums; }
-.menu__foot { margin-top: 36px; display: flex; flex-direction: column; gap: 14px; }
+.menu a i { font-style: normal; font-size: .68rem; letter-spacing: .12em; color: var(--brand-500); font-variant-numeric: tabular-nums; }
+.menu__foot { margin-top: 30px; display: flex; flex-direction: column; gap: 12px; }
+.menu__foot .btn { min-height: 50px; }
 
 /* ============================================================ HERO */
 .hero {
