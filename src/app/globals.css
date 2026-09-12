@@ -464,11 +464,17 @@ h2 + .lead, .lead + .lead, .h2 + .lead { margin-top: clamp(18px, 2vw, 26px); }
 
 /* ============================================================ PERCEPÇÃO (interação assinatura) */
 .perc { background: var(--ink-950); padding-block: clamp(90px, 12vw, 170px); }
+/* O espaçamento entre as palavras é do flex, não de espaços em branco no
+   markup: no React os <span> saem colados (JSX não cria nós de texto entre
+   eles), e aí `word-spacing` não tem em que se aplicar — as palavras viravam
+   uma cadeia única, sem ponto de quebra, que estourava a largura da página. */
 .perc__field {
   position: relative; margin-inline: auto; max-width: 1000px;
+  display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline;
+  column-gap: .5em; row-gap: .3em;
   font-family: var(--font-display); font-weight: 600;
   font-size: clamp(1.2rem, .65rem + 2.5vw, 2.7rem); line-height: 1.3;
-  letter-spacing: -.02em; text-align: center; word-spacing: .4em;
+  letter-spacing: -.02em; text-align: center;
   color: hsl(222 20% 26%); user-select: none;
 }
 .perc__field .w { transition: color 700ms var(--ease); }

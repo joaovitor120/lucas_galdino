@@ -48,7 +48,13 @@ export const metadata: Metadata = {
     images: [site.ogImage],
   },
   icons: {
-    icon: '/favicon.ico',
+    // o SVG é a marca do site anterior, servida do mesmo jeito (/favicon.svg);
+    // o .ico fica de reserva para navegadores que não leem SVG
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: '48x48' },
+    ],
+    shortcut: '/favicon.svg',
     apple: '/apple-touch-icon.png',
   },
 };
