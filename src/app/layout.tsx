@@ -61,7 +61,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" data-scroll-behavior="smooth">
       <head>
         {/* fontes self-hosted: 3 arquivos, 86 KB no total — nada bloqueia o LCP */}
         <link rel="preload" as="font" type="font/woff2" href="/fonts/archivo-latin.woff2" crossOrigin="anonymous" />
