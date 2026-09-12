@@ -19,13 +19,26 @@ export const site = {
   ogImage: '/og-image.jpg',
 } as const;
 
+/**
+ * Formato de um número exibido com contador animado.
+ * Os campos opcionais evitam que `as const` gere uma união em que alguns
+ * membros não têm `prefix`/`suffix`/`unit` — o que quebra o build.
+ */
+export type Stat = {
+  prefix?: string;
+  value: number;
+  suffix?: string;
+  unit?: string;
+  label: string;
+};
+
 /** Métricas do hero — no máximo quatro, todas verificáveis. */
-export const heroStats = [
+export const heroStats: readonly Stat[] = [
   { prefix: '+', value: 200, label: 'palestras realizadas' },
   { value: 95, label: 'países ouvem o Live In Cast' },
   { prefix: 'Top ', value: 1, suffix: '%', label: 'Spotify 2025 · Live In Cast' },
   { value: 2, label: 'livros publicados' },
-] as const;
+];
 
 /** Indicadores da seção “Sobre Lucas”. */
 export const facts = [
@@ -36,11 +49,11 @@ export const facts = [
 ] as const;
 
 /** Números do podcast, sempre com contexto (número solto não é autoridade). */
-export const castStats = [
+export const castStats: readonly Stat[] = [
   { value: 95, label: 'países de audiência' },
   { value: 245, unit: ' mil', label: 'minutos ouvidos em 2025' },
   { prefix: 'Top ', value: 1, suffix: '%', label: 'Spotify 2025' },
-] as const;
+];
 
 export const credentials = [
   'Eng. de Produção',
