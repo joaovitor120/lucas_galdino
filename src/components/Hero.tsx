@@ -70,15 +70,18 @@ export default function Hero() {
             {heroStats.map((s) => (
               <div className="proof__item" key={s.label}>
                 <p className="proof__n mono-num">
+                  {/* sinais (+, ~, %) recebem o verde da marca; "mil" é palavra,
+                      fica na cor do número para não virar enfeite */}
                   {s.prefix ? (
-                    s.prefix === '+' ? (
-                      <span className="u">+</span>
+                    s.prefix === '+' || s.prefix === '~' ? (
+                      <span className="u">{s.prefix}</span>
                     ) : (
                       <span>{s.prefix}</span>
                     )
                   ) : null}
                   <span data-count={s.value}>{s.value}</span>
                   {s.suffix ? <span className="u">{s.suffix}</span> : null}
+                  {s.unit ? <span>{s.unit}</span> : null}
                 </p>
                 <p className="proof__l">{s.label}</p>
               </div>

@@ -32,12 +32,16 @@ export type Stat = {
   label: string;
 };
 
-/** Métricas do hero — no máximo quatro, todas verificáveis. */
+/**
+ * Métricas do hero — no máximo quatro, todas verificáveis.
+ * "Top 1% Spotify" e "2 livros publicados" saíram daqui para abrir espaço ao
+ * alcance corporativo; seguem publicados em “Sobre Lucas” e no Live In Cast.
+ */
 export const heroStats: readonly Stat[] = [
   { prefix: '+', value: 200, label: 'palestras realizadas' },
+  { prefix: '~', value: 2, unit: ' mil', label: 'empresas · 9 estados' },
+  { value: 245, unit: ' mil', label: 'minutos ouvidos em 2025' },
   { value: 95, label: 'países ouvem o Live In Cast' },
-  { prefix: 'Top ', value: 1, suffix: '%', label: 'Spotify 2025 · Live In Cast' },
-  { value: 2, label: 'livros publicados' },
 ];
 
 /** Indicadores da seção “Sobre Lucas”. */
