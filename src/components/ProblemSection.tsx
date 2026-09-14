@@ -54,7 +54,7 @@ export default function ProblemSection() {
         </div>
 
         <div className="problem__out" data-reveal>
-          <p className="h2" style={{ fontSize: 'clamp(1.6rem,1.1rem+2.1vw,2.75rem)' }}>
+          <p className="h1">
             O desafio não é apenas ensinar o risco. É impedir que ele desapareça da percepção.
           </p>
         </div>

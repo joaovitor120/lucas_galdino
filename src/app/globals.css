@@ -395,7 +395,15 @@ h2 + .lead, .lead + .lead, .h2 + .lead { margin-top: clamp(18px, 2vw, 26px); }
   margin-top: clamp(48px, 6vw, 84px); padding-top: clamp(36px, 4vw, 56px);
   border-top: 2px solid var(--text-on-light); max-width: min(100%, 760px);
 }
-.problem__out p { max-width: 17ch; }
+/* mesmo tratamento do h1 do hero. Como o elemento é <p>, ele não herda o
+   line-height nem o letter-spacing da regra de títulos — por isso vêm aqui. */
+.problem__out p {
+  max-width: 17ch;
+  font-size: var(--fs-h1);
+  line-height: 1.06;
+  letter-spacing: -.025em;
+  text-wrap: balance;
+}
 
 /* ============================================================ MANIFESTO */
 .manifesto { padding-block: clamp(120px, 17vw, 260px); background: var(--ink-950); overflow: hidden; }
