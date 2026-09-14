@@ -178,8 +178,15 @@ section { position: relative; }
 }
 .eyebrow--plain::before { display: none; }
 
-.h1 { font-size: var(--fs-h1); }
-.h2 { font-size: var(--fs-h2); }
+/* As classes carregam o tratamento completo de título, não só o corpo da
+   fonte: aplicadas a um elemento que não é h1..h4 — um <p>, por exemplo —,
+   a regra de elemento acima não alcança, e o texto cairia na fonte e na
+   entrelinha do corpo. */
+.h1, .h2, .h3 {
+  font-family: var(--font-display); font-weight: 600; text-wrap: balance;
+}
+.h1 { font-size: var(--fs-h1); line-height: 1.06; letter-spacing: -.025em; }
+.h2 { font-size: var(--fs-h2); line-height: 1.06; letter-spacing: -.025em; }
 .h3 { font-size: var(--fs-h3); line-height: 1.18; letter-spacing: -.015em; }
 .mega { font-size: var(--fs-mega); line-height: .98; letter-spacing: -.035em; font-weight: 600; }
 
@@ -397,12 +404,10 @@ h2 + .lead, .lead + .lead, .h2 + .lead { margin-top: clamp(18px, 2vw, 26px); }
 }
 /* mesmo tratamento do h1 do hero. Como o elemento é <p>, ele não herda o
    line-height nem o letter-spacing da regra de títulos — por isso vêm aqui. */
+/* o resto do tratamento vem da classe .h1, igual ao #hero-title */
 .problem__out p {
   max-width: 17ch;
   font-size: calc(var(--fs-h1) * .8);   /* 20% menor que o hero, em toda largura */
-  line-height: 1.06;
-  letter-spacing: -.025em;
-  text-wrap: balance;
 }
 
 /* ============================================================ MANIFESTO */

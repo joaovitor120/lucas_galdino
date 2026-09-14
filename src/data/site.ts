@@ -9,8 +9,8 @@ export const site = {
   role: 'Palestras corporativas',
   url: 'https://lucasgaldinopalestras.com',
   email: 'lucas@liveocupacional.com',
-  phoneDisplay: '(27) 99988-4668',
-  phoneE164: '5527999884668',
+  phoneDisplay: '(27) 99988-4234',
+  phoneE164: '5527999884234',
   mediaKit: '/media-kit-lucas-galdino.pdf',
   title:
     'Lucas Galdino · Palestras sobre Segurança, Comportamento e Percepção de Riscos',

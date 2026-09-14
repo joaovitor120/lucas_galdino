@@ -19,7 +19,7 @@ export const structuredData = {
       url: `${site.url}/`,
       image: `${site.url}${site.ogImage}`,
       email: site.email,
-      telephone: '+55-27-99988-4668',
+      telephone: '+55-27-99988-4234',
       knowsLanguage: 'pt-BR',
       knowsAbout: [
         'Segurança do Trabalho',
