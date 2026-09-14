@@ -399,7 +399,7 @@ h2 + .lead, .lead + .lead, .h2 + .lead { margin-top: clamp(18px, 2vw, 26px); }
    line-height nem o letter-spacing da regra de títulos — por isso vêm aqui. */
 .problem__out p {
   max-width: 17ch;
-  font-size: var(--fs-h1);
+  font-size: calc(var(--fs-h1) * .8);   /* 20% menor que o hero, em toda largura */
   line-height: 1.06;
   letter-spacing: -.025em;
   text-wrap: balance;
